@@ -1,7 +1,7 @@
 const loginForm = document.querySelector(".login-form");
 
 loginForm.addEventListener("submit", function (event) {
-  event.preventDefault(); 
+  event.preventDefault();
 
   const formData = new FormData(loginForm);
   const userData = {};
@@ -15,7 +15,6 @@ loginForm.addEventListener("submit", function (event) {
     return;
   }
 
-  console.log(userData); 
-  loginForm.reset(); 
+  console.log(userData);
+  loginForm.reset();
 });
-

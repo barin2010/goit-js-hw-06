@@ -19,5 +19,4 @@ function updateCounter() {
 decrementButton.addEventListener("click", decrement);
 incrementButton.addEventListener("click", increment);
 
-
 updateCounter();
