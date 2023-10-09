@@ -14,13 +14,10 @@ const images = [
 ];
 
 const gallery = document.querySelector("ul.gallery");
-images.forEach((image) => {
-  const li = document.createElement("li");
-  li.classList.add("gallery-item");
+const galleryItemsHTML = images.map((image) => {
+  return `<li class="gallery-item">
+    <img src="${image.url}" alt="${image.alt}" class="gallery-image">
+  </li>`;
+}).join('');
 
-  li.insertAdjacentHTML(
-    "beforeend",
-    `<img src="${image.url}" alt="${image.alt}" class="gallery-image">`
-  );
-  gallery.appendChild(li);
-});
+gallery.insertAdjacentHTML("beforeend", galleryItemsHTML);
